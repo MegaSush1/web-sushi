@@ -1,0 +1,21 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+@font-face{
+	font-family:cosmonaut;
+	src: url(../font/Cosmonaut.ttf)
+}
+@font-face{
+	font-family: bold-font;
+	src: url(../font/THEBOLDFONT.ttf)
+}
+@font-face{
+	font-family: roboto-regular;
+	src: url(../font/roboto/Roboto-Regular.ttf)
+}
+@font-face{
+	font-family: next-art-semibold;
+	src: url(../font/next_art/NEXT_ART_Regular.otf)
+}

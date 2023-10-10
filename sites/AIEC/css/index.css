@@ -1,0 +1,73 @@
+header{
+	display:flex;
+	height:80vh;
+	width:100%;
+	justify-content:center;
+	background:center / cover url(https://cdn.brita.net/.imaging/opt/1659094625115/dam/jcr:15d50945-9136-4790-972a-272379a21405/Glass_of_water_Stage_-_Desktop_2560x1160.jpg) no-repeat;
+}
+header > div{
+	display:flex;
+	width:100%;
+	max-width:1200px;
+	margin:0 20px;
+	justify-content:center;
+	flex-direction:column;
+	color:#fff;
+}
+
+header > div p{
+	font-size:2rem;
+}
+header > div p span{
+	font-family:bebasneue;
+	font-size:8rem;
+	line-height:5rem;
+}
+@media(max-width:800px){
+	header > div p{
+		font-size:1.5rem;
+	}
+	header > div p span{
+		font-size:5rem;
+		line-height:3rem;
+	}
+}
+
+#aide{
+	display:flex;
+	min-height:500px;
+	justify-content:center;
+	align-items:center;
+}
+#aide >div{
+	height:80%;
+	width:100%;
+	max-width:800px;
+	padding:20px;
+}
+#aide >div p{
+	margin:0 0 10px 0;
+	font-family:bebasneue;
+	font-size:2rem;
+}
+#aide >div a{
+	display:flex;
+	font-family:oswald;
+	font-size:3rem;
+	padding:20px;
+	margin:0 0 10px 0;
+	border-radius:10px;
+	justify-content:space-between;
+	background:#0093ff;
+	color:#fff;
+}
+#aide >div a span{
+	font-family:oswald;
+	font-size:3rem;
+}
+#aide >div a:hover{
+	padding:18px;
+	border:2px solid #000;
+	background:#ffffff;
+	color:#000;
+}

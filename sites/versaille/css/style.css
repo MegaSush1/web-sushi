@@ -1,0 +1,109 @@
+*{
+    margin:0;
+    padding:0;
+}
+@font-face {
+    font-family: boldFont;
+    src: url(font/THEBOLDFONT.ttf);
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    height:500vh;
+}
+
+/*header*/
+
+header{
+    display:block;
+    height:100vh;
+    width:100%;
+}
+.title{
+    display:flex;
+    position:relative;
+    height:100%;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+}
+.title h1{
+    font-family: boldFont;
+    font-size:10rem;
+    color:#fff;
+}
+.title #background{
+    z-index:-1;
+    position:absolute;
+    height: 100%;
+    width:100%;
+}
+.title #background span:first-child{
+    z-index:0;
+    position:absolute;
+    height: 100%;
+    width:100%;
+    background: center / 1920px 1080px url(../img/magicien-mentaliste-chateau-versailles.png) no-repeat fixed;
+    filter:brightness(0.8);
+}
+.title #background span:last-child{
+    z-index:-1;
+    position:absolute;
+    height: 100%;
+    width:100%;
+    background: center / cover url(../img/magicien-mentaliste-chateau-versailles.png) no-repeat fixed;
+    filter:blur(10px);
+}
+.menu{
+    display:block;
+    position:absolute;
+    top:90vh;
+    height:10vh;
+    width:100%;
+    background:#000d;
+}
+.menu nav{
+    height:100%;
+    width:100%;
+}
+.menu ul{
+    display:flex;
+    height:100%;
+    width:100%;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    list-style-type:none;
+}
+.menu li{
+    z-index:2;
+    position:relative;
+    height:80%;
+}
+.menu li:before{
+    content:'';
+    z-index:-1;
+    position:absolute;
+    height:0;
+    width:100%;
+    background:rgb(240, 167, 8);
+    transition:200ms;
+}
+.menu li:hover:before{
+    height:100%;
+}
+.menu a{
+    display:flex;
+    box-sizing:border-box;
+    height:100%;
+    width:100%;
+    padding:0 20px;
+    border:2px solid #fff;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}

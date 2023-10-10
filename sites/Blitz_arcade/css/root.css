@@ -1,0 +1,35 @@
+@font-face{
+	font-family:aBigDeal;
+	src: url('font/aBigDeal.woff2') format('woff2'), 
+	url('font/aBigDeal.ttf') format('truetype'), 
+	url('font/aBigDeal.svg') format('svg'), 
+	url('font/aBigDeal.otf') format('opentype');
+}
+@font-face{
+	font-family:Cosmonaut;
+	src: url('font/Cosmonaut.woff2') format('woff2'), 
+	url('font/Cosmonaut.ttf') format('truetype'), 
+	url('font/Cosmonaut.svg') format('svg'), 
+	url('font/Cosmonaut.otf') format('opentype');
+}
+@font-face{
+	font-family:RainFall;
+	src: url('font/RAINFALL.woff2') format('woff2'), 
+	url('font/RAINFALL.ttf') format('truetype'), 
+	url('font/RAINFALL.svg') format('svg'), 
+	url('font/RAINFALL.otf') format('opentype');
+}
+@font-face{
+	font-family:TheBoldFont;
+	src: url('font/THEBOLDFONT.woff2') format('woff2'), 
+	url('font/THEBOLDFONT.ttf') format('truetype'), 
+	url('font/THEBOLDFONT.svg') format('svg'), 
+	url('font/THEBOLDFONT.otf') format('opentype');
+}
+
+
+
+:root{
+	--background-aside:url(../img/fortnite.webp);
+	--background-upper-menu:#000d;
+}
