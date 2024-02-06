@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Varela+Round&family=Roboto+Condensed:wght@700&display=swap');
+
+html
+{
+  scroll-behavior: smooth;
+  overflow-x:hidden;
+}
+*, *:before, *:after
+{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-spacing:0;
+	font-size: 100%;
+	font-weight: inherit;
+	font-style: inherit;
+	font-family: 'Varela Round', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	list-style:none;
+	color:#000;
+	text-decoration:none;
+	outline: none;
+	border:none;
+	background-image:none;
+	background-color:transparent;
+	box-shadow: none;  
+}
+
+.button-hover{
+    cursor:pointer;
+}
+
+/*start styling*/
+
+/*start topbar*/
+
+header{
+    position:fixed;
+    z-index:900;
+    display:flex;
+    height:150px;
+    width:100%;
+    padding:0 100px;
+    align-items:center;
+    justify-content: space-between;
+}
+
+header h1{
+    height:50px;
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-size:40px;
+}
+
+.right-header{
+    display:flex;
+    height:100%;
+    width:100%;
+    padding:0 0 0 20px;
+    align-items:center;
+    justify-content: right;
+    gap:20px;
+}
+
+#searchbar{
+    position:relative;
+    height:50px;
+    max-width:500px;
+    flex:1;
+}
+#searchbar .i-logo{
+    top:0;
+    position:absolute;
+    z-index:+1;
+    height:50px;
+    width:50px;
+    padding:12px;
+}
+#searchbar .search-input{
+    position:relative;
+    z-index:+2;
+    height:100%;
+    width: 100%;
+    padding:0 10px 0 70px;
+    color:#000;
+}
+
+#searchbar .search-input::placeholder {
+    color: #000000;
+    opacity: 1;
+}
+  
+#searchbar .search-input::-ms-input-placeholder {
+    color: #000000;
+}
+
+#searchbar .search-input:focus{
+    outline:2px solid #000000;
+}
+#searchbar:has(.search-input:focus){
+    background:#ffffff;
+}
+
+#menu{
+    display:flex;
+    gap:10px;
+}
+#menu a{
+    display:flex;
+    height:50px;
+    width:50px;
+    padding:10px;
+    justify-content: center;
+    align-items: center;
+    font-weight:700;
+    font-size:12px;
+}
+#menu a:hover{
+    background:#000000;
+    color:#ffffff;
+    fill:#ffffff;
+}
+
+/*end topbar*/
+
+/*start main aside*/
+main{
+    display:flex;
+    height:100vh;
+}
+aside{
+    display:flex;
+    height:100%;
+    width:30%;
+    padding:50px 0 0 100px;
+    justify-content:center;
+    flex-direction:column;
+}
+aside .nav-wrapper{
+    display:flex;
+    align-items: center;
+    flex:1;
+}
+aside nav ul{
+    display:flex;
+    flex-direction: column;
+    gap:40px;
+    margin:0 0 150px 0;
+}
+aside nav ul li a{
+    font-weight:700;
+}
+aside nav ul li a:hover{
+    text-decoration: underline;
+}
+.live-button{
+    display:inline-block;
+    padding:10px 45px;
+    background:#000000;
+    color:#ffffff;
+}
+.live-button:hover{
+    border:2px solid #000000;
+    background:#ffffff;
+    color:#000000;
+    padding:8px 43px;
+}
+
+.aside-footer{
+    display:flex;
+    height:50px;
+    gap:5px;
+}
+.aside-footer a{
+    height:25px;
+    width:25px;
+}
+.aside-footer a svg{
+    height:100%;
+    width:100%;
+    fill:#333333;
+}
+.aside-footer a:hover svg{
+    fill:#000000;
+}
+
+/*end main aside*/
+/*start main*/
+
+.content{
+    height:100%;
+    flex:1;
+    overflow:hidden;
+}
+
+.carouselle{
+    position:relative;
+    display:flex;
+    height:100%;
+    flex-wrap:nowrap;
+}
+
+.action-carouselle{
+    position:absolute;
+    z-index:+5;
+    bottom:30px;
+    right:30px;
+}
+.action-carouselle svg{
+    height:40px;
+    width:40px;
+}
+
+.card{
+    position:relative;
+    display:flex;
+    height:100%;
+    min-width:400px;
+    width:400px;
+    padding:150px 70px 100px 70px;
+    align-items: end;
+    background-position:center left;
+    transition:.2s background;
+}
+
+.card *{
+    color:#aaa;
+}
+
+.card.selected *{
+    color:#ffffff;
+}
+.card.selected{
+    z-index:+1;
+    background:linear-gradient(#0003,#0003),center / cover no-repeat var(--card-back);
+}
+
+.card .card-content{
+    display:flex;
+    height:80%;
+    width:100%;
+    flex-direction:column;
+    align-items:end;
+    justify-content: space-between;
+}
+
+.card :is(.schedul,.artist,.ticket-statue){
+    width:100%;
+}
+
+.card .schedul > *{
+    margin-bottom:5px;
+}
+
+.card .date{
+    display:inline-block;
+    position:relative;
+}
+.card .date p{
+    display:inline-block;
+    position:relative;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size:160px;
+    line-height:120px;
+}
+.card .date span{
+    display:inline;
+    position:absolute;
+    left:100%;
+    top:0;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size:20px;
+}
+
+
+.card .artist{
+    font-weight:900;
+    font-size:40px;
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 5px;
+    height:88px;
+}
+
+.card .ticket-statue{
+    font-weight:400;
+}
+
+.card .seemore-button{
+    display:inline-flex;
+    height:20px;
+    align-items:center;
+    gap:50px;
+    font-size:12px;
+    visibility:hidden;
+}
+.card.selected .seemore-button{
+    visibility:visible;
+}
+.card .seemore-button svg{
+    height:30px;
+}
+
+
+
+/*end main*/
+/*end styling*/
